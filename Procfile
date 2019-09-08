@@ -1,0 +1,1 @@
+web: java -jar build/libs/zull-0.0.1-SNAPSHOT.jar -p $PORT

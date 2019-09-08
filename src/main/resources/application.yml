@@ -1,0 +1,33 @@
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+  routes:
+    person-user-profile-api:
+      path: /person/**
+      serviceId: PERSON-USER-PROFILE-API
+    hello-client:
+      path: /client/**
+      serviceId: EUREKA-CLIENT
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://service-registry-person.herokuapp.com/eureka/
+  instance:
+    hostname: service-registry-person.herokuapp.com
+
+server:
+  port: 8074
+
+spring:
+  application:
+    name: zuul-proxy-service
+
+# Increase the Hystrix timeout to 60s (for all)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
