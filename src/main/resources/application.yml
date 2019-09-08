@@ -5,9 +5,9 @@ zuul:
     person-user-profile-api:
       path: /person/**
       serviceId: PERSON-USER-PROFILE-API
-    hello-client:
+    person-client-api:
       path: /client/**
-      serviceId: EUREKA-CLIENT
+      serviceId: PERSON_CLIENT_API
 
 eureka:
   client:
