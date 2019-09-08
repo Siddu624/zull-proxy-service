@@ -10,6 +10,6 @@ deploy:
   provider: heroku
   api_key:
     secure: 19554c07-2c74-4541-b296-478bd04c915a
-  app: zull-proxy-service
+  app: zuul-proxy-service
   on:
-    repo: Siddu624/zull-proxy-service
+    repo: Siddu624/zuul-proxy-service

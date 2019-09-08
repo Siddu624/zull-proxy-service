@@ -21,7 +21,7 @@ server:
 
 spring:
   application:
-    name: zuul-service
+    name: zuul-proxy-service
 
 # Increase the Hystrix timeout to 60s (for all)
 hystrix:
