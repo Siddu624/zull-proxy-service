@@ -5,12 +5,14 @@ zuul:
     person-user-profile-api:
       path: /person/**
       serviceId: PERSON-USER-PROFILE-API
-    hello-client:
+    person-client-api:
       path: /client/**
-      serviceId: EUREKA-CLIENT
+      serviceId: PERSON_CLIENT_API
 
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: https://service-registry-person.herokuapp.com/eureka/
   instance:

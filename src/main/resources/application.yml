@@ -11,6 +11,8 @@ zuul:
 
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: https://service-registry-person.herokuapp.com/eureka/
   instance:
