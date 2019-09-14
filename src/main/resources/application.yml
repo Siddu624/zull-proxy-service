@@ -1,10 +1,10 @@
 zuul:
   routes:
     person-user-profile-api:
-      path: /api/person/
+      path: /api/person/*
       url: https://person-profile-api.herokuapp.com/
     person-client-api:
-      path: /api/client/
+      path: /api/client/*
       url: https://person-client-api.herokuapp.com/
 eureka:
   client:
