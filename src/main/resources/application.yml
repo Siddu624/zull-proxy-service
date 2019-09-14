@@ -1,11 +1,28 @@
 zuul:
+  prefix: /api
   routes:
     person-user-profile-api:
-      path: /api/person/
-      url: https://person-profile-api.herokuapp.com/
+      path: /person/**
+      uri: https://person-profile-api.herokuapp.com/
     person-client-api:
-      path: /api/client/
-      url: https://person-client-api.herokuapp.com/
+      path: /client/**
+      uri: https://person-client-api.herokuapp.com/
+
+ zuul:
+  routes:
+    first:
+      path: /first/**
+      url: https://first.example.com
+    second:
+      path: /second/**
+      url: forward:/second
+    third:
+      path: /third/**
+      url: forward:/3rd
+    legacy:
+      path: /**
+      url: https://legacy.example.com
+
 eureka:
   client:
     registerWithEureka: true
