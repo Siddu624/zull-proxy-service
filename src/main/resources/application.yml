@@ -1,12 +1,11 @@
 zuul:
-  prefix: /api
   routes:
     person-user-profile-api:
-      path: /person/
-      uri: https://person-profile-api.herokuapp.com/
+      path: /api/perso n/
+      url: https://person-profile-api.herokuapp.com/
     person-client-api:
-      path: /client/
-      uri: https://person-client-api.herokuapp.com/
+      path: /api/client/
+      url: https://person-client-api.herokuapp.com/
 eureka:
   client:
     registerWithEureka: true
