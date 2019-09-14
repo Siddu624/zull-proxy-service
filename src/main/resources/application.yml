@@ -1,14 +1,11 @@
 zuul:
-  #Service will be mapped under the /api URI
-  prefix: /api
   routes:
     person-user-profile-api:
-      path: /person/**
-      serviceId: PERSON-USER-PROFILE-API
+      path: /api/person/
+      url: https://person-profile-api.herokuapp.com/
     person-client-api:
-      path: /client/**
-      serviceId: PERSON_CLIENT_API
-
+      path: /api/client/
+      url: https://person-client-api.herokuapp.com/
 eureka:
   client:
     registerWithEureka: true
